@@ -1,9 +1,9 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat();
 
 export default function RootLayout({
   children,
@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${inter.className} mt-2 mb-2`}>
+        <body className={`${montserrat.className} mt-2 mb-2`}>
           <Header />
           {children}
         </body>

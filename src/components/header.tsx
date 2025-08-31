@@ -7,16 +7,25 @@ import { LayoutDashboard, PenBoxIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="h-16 flex items-center justify-between border-b shadow-sm">
+    <div className="h-16 top-0 flex items-center justify-between border-b shadow-sm">
       {/* LEFT */}
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%]">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="logo" width={60} height={60} />
-          <span className="hidden lg:block font-bold text-sm">
-            Personal Finance Tracker
-          </span>
+          <div className="w-[35%] flex justify-center">
+            <Image src="/logo.png" alt="logo" width={60} height={60} />
+          </div>
+
+          {/* Text section - 65% */}
+          <div className="w-[65%] hidden lg:block">
+            <div className="font-bold text-sm leading-tight p-4">
+              <div>Personal</div>
+              <div>Finance</div>
+              <div>Tracker</div>
+            </div>
+          </div>
         </Link>
       </div>
+      {/* RIGHT */}
       <div className="flex items-center space-x-4 p-4">
         <SignedIn>
           <Link

@@ -120,3 +120,16 @@
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+  .gradient-title {
+    background: linear-gradient(to top, #24362a, #2bce85);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
