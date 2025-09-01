@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 
-const HeroPage = () => {
+const HeroComponent = () => {
   return (
     <div className="pt-20">
       <div className="flex flex-col text-center">
@@ -36,4 +36,4 @@ const HeroPage = () => {
   );
 };
 
-export default HeroPage;
+export default HeroComponent;

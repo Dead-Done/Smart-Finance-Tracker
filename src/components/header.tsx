@@ -51,6 +51,7 @@ const Header = () => {
         </SignedOut>
         <SignedIn>
           <UserButton
+            userProfileUrl="/user-profile"
             appearance={{
               elements: {
                 avatarBox: "w-10 h-10",
