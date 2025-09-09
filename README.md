@@ -1,37 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Finance Platform
 
-## Getting Started
+Full Stack AI Finance Platform built with Next.js, Supabase, Tailwind, Prisma, Inngest, ArcJet, and Shadcn UI.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This platform provides:
+- Profile management with secure authentication and 2FA
+- Dashboard with charts, metrics, and notifications
+- Expense management (budgets, AI insights, receipt scanning)
+- Smart transaction management (categorization, recurring, bulk actions)
+
+## Collaboration & Branching Workflow
+
+This project uses a **feature-branch workflow** for collaborative development:
+
+1. **Each contributor works in a separate branch** for their assigned module (see below).
+2. **Modules are developed in `modules/<module-name>/` folders** and merged via pull requests (PRs).
+3. **After all PRs are merged**, the maintainer moves files from `modules/` into the main project structure and removes the `modules/` folder.
+
+### Module Assignments
+
+| Module                  | Contributor                | Branch Name                      |
+|-------------------------|----------------------------|----------------------------------|
+| Profile Management      | Ahrar                      | feature/profile-management       |
+| Dashboard & Notifications | Shawon                   | feature/dashboard-notifications  |
+| Expense Management      | MD. AL- AHMAID HOSSAIN     | feature/expense-management       |
+| Transactions            | Sowmik                     | feature/transactions             |
+
+### Integration Steps
+
+1. Each contributor creates a branch from `main` and commits only their module files.
+2. Open a PR to `main`.
+3. Maintainer reviews, tests, and merges each PR.
+4. After all merges, maintainer moves files from `modules/` to the main structure and deletes `modules/`.
+5. Final testing and deployment.
+
+## Environment Setup
+
+Create a `.env` file with the following variables:
+
+```
+DATABASE_URL=""
+DIRECT_URL=""
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="pk_test_Z3JhdGVmdWwtd2FzcC01OC5jbGVyay5hY2NvdW50cy5kZXYk"
+CLERK_SECRET_KEY="sk_test_b6Kabjm1CqvhleSjr7ThzL5cV2TJZcSQM73OPuJM95"
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+
+GEMINI_API_KEY="AIzaSyCXYavTDg9UMEyVixmIC6wKYni9jUZntyY"
+RESEND_API_KEY="re_5arUqzeT_5YvqM9S37aNzUTnNtNPnuut2"
+ARCJET_KEY="ajkey_01k34rfgbrets9yxmvzvcf0aha"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Finance-Tracker-with-Ai-Implementation-
